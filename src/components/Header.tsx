@@ -5,7 +5,7 @@ export default function Header() {
     <header className="w-full bg-white shadow-md py-4 px-6">
       <nav className="max-w-4xl mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold text-blue-600">
-          yuu's Portfolio
+          yuu&apos;s Portfolio
         </Link>
         <div className="flex gap-6 text-gray-700">
           <Link href="/" className="hover:text-blue-600 transition">Home</Link>
