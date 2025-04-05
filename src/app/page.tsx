@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -29,8 +30,16 @@ export default function Home() {
 
         {/* 競技プログラミング */}
         <div className="mb-8">
-          <h3 className="text-2xl font-semibold mb-3 text-gray-700">競技プログラミング</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <div className="flex items-center justify-start space-x-4">
+            <h3 className="text-2xl font-semibold text-gray-700">競技プログラミング</h3>
+            <Link
+              href="/competitive-programming"
+              className="text-blue-500 hover:underline text-base"
+            >
+              詳しくはこちら
+            </Link>
+          </div>
+          <ul className="list-disc list-inside text-gray-700 space-y-2 mt-3">
             <li>
               <strong>AtCoder</strong> - Algorithm : <span className="text-cyan-600">水色</span>, Heuristic : <span className="text-blue-600">青色</span>
             </li>
@@ -55,6 +64,25 @@ export default function Home() {
             </li>
           </ul>
         </div>
+      </section>
+
+      {/* Qiita,はてブ */}
+      <section className="max-w-2xl w-full mb-16">
+        <h2 className="text-3xl font-bold mb-6 border-b-2 border-gray-300 inline-block">
+          Article
+        </h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <li>
+            <a href="https://qiita.com/yuu_kyopro" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+              Qiita
+            </a>
+          </li>
+          <li>
+            <a href="https://yukun-py.hatenablog.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+              はてなブログ
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
   );
