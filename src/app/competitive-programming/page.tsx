@@ -1,5 +1,9 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "競技プログラミング | yuu's Portfolio",
+};
+
 export default function CompetitiveProgramming() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-50 text-gray-900">
