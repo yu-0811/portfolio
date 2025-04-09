@@ -76,6 +76,18 @@ export default function CompetitiveProgramming() {
         </p>
         <p className="mb-4">
           当日は40名以上の参加者が集まり、盛況のうちに終了しました。
+        </p>
+        <div className="mb-6 text-center">
+          <Image
+            src="/onsite.jpg"
+            alt="KSDUPCのオンサイトイベントの様子"
+            width={500}
+            height={300}
+            className="rounded-lg shadow-md mx-auto"
+          />
+          <p className="mt-2 text-sm text-gray-500">当日の様子</p>
+        </div>
+        <p className="mb-4">
           詳しくは
           <a
             href="https://yukun-py.hatenablog.com/entry/2024/09/16/210912"
@@ -87,6 +99,7 @@ export default function CompetitiveProgramming() {
           </a>
           をご覧ください。
         </p>
+
       </section>
     </main>
   );

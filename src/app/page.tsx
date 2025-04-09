@@ -41,7 +41,29 @@ export default function Home() {
           </div>
           <ul className="list-disc list-inside text-gray-700 space-y-2 mt-3">
             <li>
-              <strong>AtCoder</strong> - Algorithm : <span className="text-cyan-600">水色</span>, Heuristic : <span className="text-blue-600">青色</span>
+              <a
+                href="https://atcoder.jp/users/YuuuT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center hover:underline text-gray-700"
+              >
+                <strong>AtCoder</strong>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-4 h-4 ml-1 text-blue-500"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 10.5L21 3m0 0h-6.75M21 3v6.75M21 21H3V3"
+                  />
+                </svg>
+              </a>  
+                - Algorithm : <span className="text-cyan-600">水色</span>, Heuristic : <span className="text-blue-600">青色</span>
             </li>
             <li>
               <strong>KSDUPC</strong>（京都産業大学・同志社大学プログラミングコンテスト）開催
