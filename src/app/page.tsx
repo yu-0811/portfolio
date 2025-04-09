@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getLatestQiitaArticles } from "@/lib/getLatestArticles";
 
-export default function Home() {
+export default async function Home() {
+  const [latestArticle] = await getLatestQiitaArticles(1);
+
   return (
     <main className="flex min-h-screen flex-col items-center px-4 py-12 bg-gray-50 text-gray-900">
       {/* 自己紹介 */}
@@ -99,6 +102,25 @@ export default function Home() {
               Qiita
             </a>
           </li>
+          {/* Qiita 最新記事表示 */}
+          <div className="bg-white p-3 rounded shadow-md text-sm">
+            <p className="text-xs text-gray-500 font-semibold mb-2">🆕 最新記事</p>
+            <a
+              href={latestArticle.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base font-bold text-blue-600 hover:underline"
+            >
+              {latestArticle.title}
+            </a>
+            <p className="text-gray-700 mt-2 line-clamp-3">
+              {latestArticle.body.replace(/<[^>]+>/g, "").slice(0, 100)}... {/* 100文字まで表示 */}
+            </p>
+            <p className="text-xs text-gray-400 mt-1">
+              投稿日: {new Date(latestArticle.created_at).toLocaleDateString()}
+            </p>
+          </div>
+
           <li>
             <a href="https://yukun-py.hatenablog.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
               はてなブログ
