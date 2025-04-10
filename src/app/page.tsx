@@ -4,8 +4,7 @@ import { getLatestQiitaArticles, getLatestHatenaArticles } from "@/lib/getLatest
 
 export default async function Home() {
   const [QiitaArticle] = await getLatestQiitaArticles(1);
-  const hatenaArticle = await getLatestHatenaArticles(1);
-  console.log(hatenaArticle);
+  const [hatenaArticle] = await getLatestHatenaArticles(1);
 
   return (
     <main className="flex min-h-screen flex-col items-center px-4 py-12 bg-gray-50 text-gray-900">
@@ -133,18 +132,18 @@ export default async function Home() {
                 🆕 最新記事
               </p>
               <a
-                href={hatenaArticle?.[0]?.url ?? "#"}
+                href={hatenaArticle?.link ?? "#"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base font-bold text-blue-600 hover:underline"
               >
-                {hatenaArticle?.[0]?.title ?? "記事タイトル"}
+                {hatenaArticle?.title ?? "記事タイトル"}
               </a>
               <p className="text-gray-700 mt-2 line-clamp-3">
-                {(hatenaArticle?.[0]?.description ?? "").slice(0, 100)}...
+                {(hatenaArticle?.description ?? "").slice(0, 100)}...
               </p>
               <p className="text-xs text-gray-400 mt-1">
-                投稿日: {hatenaArticle?.[0]?.pubDate}
+                投稿日: {hatenaArticle?.pubDate}
               </p>
             </div>
           </li>
