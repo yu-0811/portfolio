@@ -52,13 +52,13 @@ export default function CompetitiveProgramming() {
           以下は、ヒューリスティク部門で出題された問題の一例です。
           クレーンを使って左側のコンテナを、右側の複数の搬出口に指定された順に最速で運ぶための操作手順を考える問題です。
         </p>
-        <div className="mb-6">
+        <div className="mb-6 text-center">
           <Image
             src="/visualizer.gif"
             alt="ヒューリスティク部門のビジュアライザ"
             width={600}
             height={400}
-            className="rounded-lg shadow-md"
+            className="rounded-lg shadow-md mx-auto"
           />
         </div>
 
