@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getLatestQiitaArticles } from "@/lib/getLatestArticles";
+import { getLatestQiitaArticles, getLatestHatenaArticles } from "@/lib/getLatestArticles";
 
 export default async function Home() {
-  const [latestArticle] = await getLatestQiitaArticles(1);
+  const [QiitaArticle] = await getLatestQiitaArticles(1);
+  const hatenaArticle = await getLatestHatenaArticles(1);
+  console.log(hatenaArticle);
 
   return (
     <main className="flex min-h-screen flex-col items-center px-4 py-12 bg-gray-50 text-gray-900">
@@ -106,18 +108,18 @@ export default async function Home() {
           <div className="bg-white p-3 rounded shadow-md text-sm">
             <p className="text-xs text-gray-500 font-semibold mb-2">🆕 最新記事</p>
             <a
-              href={latestArticle.url}
+              href={QiitaArticle.url}
               target="_blank"
               rel="noopener noreferrer"
               className="text-base font-bold text-blue-600 hover:underline"
             >
-              {latestArticle.title}
+              {QiitaArticle.title}
             </a>
             <p className="text-gray-700 mt-2 line-clamp-3">
-              {latestArticle.body.replace(/<[^>]+>/g, "").slice(0, 100)}... {/* 100文字まで表示 */}
+              {QiitaArticle.body.replace(/<[^>]+>/g, "").slice(0, 100)}... {/* 100文字まで表示 */}
             </p>
             <p className="text-xs text-gray-400 mt-1">
-              投稿日: {new Date(latestArticle.created_at).toLocaleDateString()}
+              投稿日: {new Date(QiitaArticle.created_at).toLocaleDateString()}
             </p>
           </div>
 
@@ -125,6 +127,26 @@ export default async function Home() {
             <a href="https://yukun-py.hatenablog.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
               はてなブログ
             </a>
+            {/* はてなブログ最新記事表示 */}
+            <div className="bg-white p-3 rounded shadow-md text-sm mt-2">
+              <p className="text-xs text-gray-500 font-semibold mb-2">
+                🆕 最新記事
+              </p>
+              <a
+                href={hatenaArticle?.[0]?.url ?? "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base font-bold text-blue-600 hover:underline"
+              >
+                {hatenaArticle?.[0]?.title ?? "記事タイトル"}
+              </a>
+              <p className="text-gray-700 mt-2 line-clamp-3">
+                {(hatenaArticle?.[0]?.description ?? "").slice(0, 100)}...
+              </p>
+              <p className="text-xs text-gray-400 mt-1">
+                投稿日: {hatenaArticle?.[0]?.pubDate}
+              </p>
+            </div>
           </li>
         </ul>
       </section>
