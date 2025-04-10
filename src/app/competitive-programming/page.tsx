@@ -16,6 +16,9 @@ export default function CompetitiveProgramming() {
         <p className="mb-4">
           コンテストには、大きく分けて<strong>アルゴリズム部門</strong>と<strong>ヒューリスティク部門</strong>の2つがあります。
         </p>
+        <p className="mb-4">
+          私は大学1年生から競技プログラミングを始め、現在ではアルゴリズム部門・ヒューリスティク部門の両方で<strong>上位10%</strong>のランクを獲得しています。
+        </p>
 
         <h2 className="text-3xl font-bold mb-6">アルゴリズム部門</h2>
         <p className="mb-4">
@@ -24,14 +27,14 @@ export default function CompetitiveProgramming() {
         <section className="bg-white p-6 rounded-lg shadow-md mb-6">
           <h2 className="text-2xl font-bold mb-4">問題文</h2>
           <p className="mb-4">
-            <strong>N</strong> 個の食べ物があり、それぞれの食べ物にはビタミン <strong>1, 2, 3</strong> のうちちょうど 1 種類のみが含まれています。
+            N 個の食べ物があり、それぞれの食べ物にはビタミン 1, 2, 3 のうちちょうど 1 種類のみが含まれています。
             <br />
-            具体的には、<strong>i</strong> 番目の食べ物を食べると、ビタミン <strong>V<sub>i</sub></strong> を <strong>A<sub>i</sub></strong> だけ摂取でき、カロリー <strong>C<sub>i</sub></strong> も摂取されます。
+            具体的には、i 番目の食べ物を食べると、ビタミン V<sub>i</sub> を A<sub>i</sub> だけ摂取でき、カロリー C<sub>i</sub> も摂取されます。
           </p>
           <p className="mb-4">
-            高橋君は、摂取するカロリーの合計が <strong>X</strong> 以下になるように、<strong>N</strong> 個の食べ物のうちいくつか（0 個でも可）を選んで食べます。
+            高橋君は、<strong>摂取するカロリーの合計が X 以下になるように、N 個の食べ物のうちいくつか（0 個でも可）を選んで食べます</strong>。
             <br />
-            このとき、「ビタミン <strong>1, 2, 3</strong> のうちもっとも摂取量が少ないものの摂取量」として考えられる<strong>最大の値</strong>を求めてください。
+            このとき、<strong>「ビタミン 1, 2, 3 のうちもっとも摂取量が少ないものの摂取量」</strong>として考えられる<strong>最大の値</strong>を求めてください。
           </p>
           <h4 className="text-xl font-bold mb-4">制約</h4>
           <ul className="list-disc list-inside space-y-1 text-base">
@@ -40,8 +43,8 @@ export default function CompetitiveProgramming() {
           </ul>
         </section>
         <p className="mb-4">
-          食べ物の組み合わせは 2<sup>N</sup> 通り存在するため、全てを調べるのは現実的ではありません。
-          しかし、動的計画法と二分探索というアルゴリズムを用いることで、1 秒以内に解を求めることが可能です。
+          食べ物の組み合わせは全部で 2<sup>N</sup> 通り存在するため、全てを調べるのは現実的ではありません。
+          しかし、動的計画法と二分探索というアルゴリズムを用いることで、1 秒以内にこの問題の解を求めることが可能です。
         </p>
 
         <h2 className="text-3xl font-bold mb-6">ヒューリスティク部門</h2>
@@ -61,10 +64,6 @@ export default function CompetitiveProgramming() {
             className="rounded-lg shadow-md mx-auto"
           />
         </div>
-
-        <p className="mb-4">
-          私は大学1年生から競技プログラミングを始め、現在ではアルゴリズム部門・ヒューリスティク部門の両方で<strong>上位10%</strong>のランクを獲得しています。
-        </p>
 
         <h2 className="text-3xl font-bold mb-6">オンサイトイベントについて</h2>
         <p className="mb-4">
