@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getBlogArticles } from "@/lib/getBlogArticles";
 
 export default async function BlogPage() {
@@ -15,9 +16,11 @@ export default async function BlogPage() {
               key={article.id}
               className="bg-white p-4 rounded shadow-md hover:shadow-lg transition-shadow"
             >
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                {article.title}
-              </h2>
+              <Link href={`/blog/${article.id}`}>
+                <h2 className="text-xl font-semibold text-gray-800 mb-2 cursor-pointer">
+                  {article.title}
+                </h2>
+              </Link>
               <p className="text-gray-600 line-clamp-3">
                 {article.content.slice(0, 100)}...
               </p>
