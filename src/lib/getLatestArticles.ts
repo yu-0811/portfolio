@@ -35,7 +35,7 @@ export async function getLatestHatenaArticles(limit = 1) {
     description: item.description[0].replace(/<[^>]+>/g, ""), // HTMLタグを除去
     pubDate: new Date(item.pubDate[0]).toLocaleDateString(), // 日付をフォーマット
   }));
-  console.log(articles); 
+  // console.log(articles); 
 
   return articles;
 }

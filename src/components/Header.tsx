@@ -10,7 +10,7 @@ export default function Header() {
         <div className="flex gap-6 text-gray-700">
           <Link href="/" className="hover:text-blue-600 transition">Home</Link>
           <Link href="/competitive-programming" className="hover:text-blue-600 transition">競技プログラミング</Link>
-          <Link href="https://yukun-py.hatenablog.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+          <Link href="/blog" className="hover:text-blue-600 transition">
             Blog
           </Link>
         </div>

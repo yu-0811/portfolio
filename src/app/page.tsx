@@ -149,6 +149,31 @@ export default async function Home() {
           </li>
         </ul>
       </section>
+
+      {/* このサイト内のブログ */}
+      <section className="max-w-2xl w-full mb-16">
+        <h2 className="text-2xl font-bold mb-4 border-b-2 border-gray-300 inline-block">
+          サイト内ブログ
+        </h2>
+        <p className="text-gray-700 mb-3">
+          このサイト内にもブログページを実装しています。
+        </p>
+        <Link
+          href="/blog"
+          className="inline-flex items-center px-6 py-3 bg-white border border-gray-300 text-gray-800 font-medium rounded-full shadow-sm hover:bg-gray-100 transition-colors duration-300"
+        >
+          サイト内ブログを見る
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-5 h-5 ml-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
+      </section>
     </main>
   );
 }
