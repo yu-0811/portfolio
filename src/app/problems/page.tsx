@@ -1,5 +1,4 @@
 import { supabase } from "@/lib/supabaseClient";
-import Link from "next/link";
 
 export default async function ProblemListPage() {
   const { data: problems, error } = await supabase
