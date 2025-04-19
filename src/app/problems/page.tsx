@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabaseClient";
+import { ProblemsLikeButton } from "@/components/ProblemsLikeButton";
 
 export default async function ProblemListPage() {
   const { data: problems, error } = await supabase
@@ -32,6 +33,12 @@ export default async function ProblemListPage() {
               >
                 {problem.title}
               </a>
+              <div className="mt-2">
+                <ProblemsLikeButton
+                  problemId={problem.id}
+                  initialLikes={problem.likes ?? 0}
+                />
+              </div>
             </li>
           ))}
         </ul>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
+import BlogLikeButton from "@/components/BlogLikeButton";
 
 // よくわからないけどこう書かないとエラーがでるからもう触らない方がいい
 
@@ -31,9 +32,10 @@ export default async function BlogDetailPage({ params }: Props) {
           {article.title}
         </h1>
         <p className="text-lg text-gray-700 mb-6">{article.content}</p>
-        <p className="text-sm text-gray-400 mb-8">
-          投稿日: {new Date(article.created_at).toLocaleDateString()}
-        </p>
+        <div className="flex items-center justify-between text-sm text-gray-400 mb-8">
+          <span>投稿日: {new Date(article.created_at).toLocaleDateString()}</span>
+          <BlogLikeButton blogId={article.id} initialLikes={article.likes ?? 0} />
+        </div>
         <Link href="/blog" className="inline-block text-blue-600 hover:underline">
           ← ブログ一覧に戻る
         </Link>
