@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   icons: {
     icon: "/profile.jpg",
   },
+  openGraph: {
+    images: ["/profile.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/profile.png"],
+  },
 };
 
 export default function RootLayout({
@@ -37,3 +44,4 @@ export default function RootLayout({
     </html>
   );
 }
+
