@@ -67,10 +67,19 @@ export default async function Home() {
                   />
                 </svg>
               </a>  
-                - Algorithm : <span className="text-cyan-600">水色</span>, Heuristic : <span className="text-blue-600">青色</span>
+              {" "}  - Algorithm : <span className="text-cyan-600">水色</span>, Heuristic : <span className="text-blue-600">青色</span>
             </li>
             <li>
               <strong>KSDUPC</strong>（京都産業大学・同志社大学プログラミングコンテスト）開催
+            </li>
+            <li>
+              <Link
+                href="/problems"
+                className="text-blue-500 hover:underline"
+              >
+                作問集
+              </Link>
+              {" "} - 過去に作成した問題一覧<br />
             </li>
           </ul>
         </div>
